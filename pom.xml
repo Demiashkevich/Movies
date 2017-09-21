@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+    <groupId>com.epam</groupId>
+    <artifactId>film</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <org.jsoup>1.7.2</org.jsoup>
+        <joda-time>2.9.7</joda-time>
+        <org.springframework.boot>1.5.6.RELEASE</org.springframework.boot>
+        <com.fasterxml.jackson.core>2.9.0</com.fasterxml.jackson.core>
+        <log4j>1.2.17</log4j>
+        <io.swagger>1.5.6</io.swagger>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${org.jsoup}</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda-time}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${org.springframework.boot}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${com.fasterxml.jackson.core}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${com.fasterxml.jackson.core}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jaxrs</artifactId>
+            <version>${io.swagger}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.2</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+    </build>
+
+</project>
