@@ -1,23 +1,23 @@
 package com.epam.movies.entity;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @JsonFilter("genreFilter")
 public class Genre extends Entity<Long> {
-
+    @ApiModelProperty("The genre name")
     private String name;
-
+    @ApiModelProperty("The genre movies")
     private List<Movie> movies = new ArrayList<>();
 
     public Genre() {
     }
 
     public List<Movie> getMovies() {
-        return movies;
+        return this.movies;
     }
 
     public void setMovies(List<Movie> movies) {
@@ -25,11 +25,10 @@ public class Genre extends Entity<Long> {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-
 }

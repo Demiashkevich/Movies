@@ -1,28 +1,28 @@
 package com.epam.movies.entity;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @JsonFilter("movieFilter")
 public class Movie extends Entity<Long> {
-
+    @ApiModelProperty("The movie title")
     private String title;
-
+    @ApiModelProperty("The movie genres")
     private List<Genre> genres = new ArrayList<>();
-
+    @ApiModelProperty("The movie metascore")
     private double metascore;
-
+    @ApiModelProperty("The movie description")
     private String description;
-
+    @ApiModelProperty("The movie directors")
     private List<Director> directors = new ArrayList<>();
-
+    @ApiModelProperty("The movie stars")
     private List<Star> stars = new ArrayList<>();
-
+    @ApiModelProperty("The movie realize time date")
     private String timeDate;
-
+    @ApiModelProperty("The movie certification score")
     private String certificateRuntime;
 
     public Movie() {

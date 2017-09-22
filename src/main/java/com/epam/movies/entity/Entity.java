@@ -1,9 +1,11 @@
 package com.epam.movies.entity;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 
 public class Entity<K> implements Serializable {
-
+  @ApiModelProperty("Generated ID")
   private K id;
 
   public K getId() {
@@ -28,5 +30,4 @@ public class Entity<K> implements Serializable {
   public int hashCode() {
     return id.hashCode();
   }
-
 }
